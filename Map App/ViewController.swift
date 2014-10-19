@@ -29,6 +29,14 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
        
         mapView.setRegion(region, animated: true)
+        
+        var annotation:MKPointAnnotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = "Xilinx Inc."
+        annotation.subtitle = "My Office"
+        
+        mapView.addAnnotation(annotation)
+        
     }
 
     override func didReceiveMemoryWarning() {
