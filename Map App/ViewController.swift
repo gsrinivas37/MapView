@@ -56,6 +56,21 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     //Called everytime location is updated
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         println("Locations = \(locations)")
+        
+        var userLocation: CLLocation = locations[0] as CLLocation
+        
+        //var latitude:CLLocationDegrees = userLocation.coordinate
+        //var longitude:CLLocationDegrees = -121.934048
+        //var location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        var latDelta:CLLocationDegrees = 0.01
+        var lonDelta:CLLocationDegrees = 0.01
+        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        
+        var region:MKCoordinateRegion = MKCoordinateRegionMake(userLocation.coordinate, span)
+        
+        mapView.setRegion(region, animated: true)
+        
     }
     
     //Called when location is not obtained coz user has declined to give access or some other error.
