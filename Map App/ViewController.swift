@@ -37,8 +37,25 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         mapView.addAnnotation(annotation)
         
+        var gesture:UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "action:");
+        gesture.minimumPressDuration = 2.0
+        
+        mapView.addGestureRecognizer(gesture)
     }
-
+    
+    
+    func action(gesture: UILongPressGestureRecognizer) {
+        var touchPoint = gesture.locationInView(self.mapView)
+        var location:CLLocationCoordinate2D = mapView.convertPoint(touchPoint, toCoordinateFromView: self.mapView)
+        
+        var newAnnot:MKPointAnnotation = MKPointAnnotation()
+        newAnnot.coordinate = location
+        newAnnot.title = "My New annotation"
+        newAnnot.subtitle = "My New annotation sub title"
+        self.mapView.addAnnotation(newAnnot)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
