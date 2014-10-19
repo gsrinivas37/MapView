@@ -14,6 +14,7 @@
 		4013C25D19F3ADA70082CD1B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4013C25B19F3ADA70082CD1B /* LaunchScreen.xib */; };
 		4013C26919F3ADA70082CD1B /* Map_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4013C26819F3ADA70082CD1B /* Map_AppTests.swift */; };
 		4013C27319F3ADB60082CD1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4013C27219F3ADB60082CD1B /* MapKit.framework */; };
+		40769D9619F3BC290071BB96 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40769D9519F3BC290071BB96 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		4013C26719F3ADA70082CD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4013C26819F3ADA70082CD1B /* Map_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_AppTests.swift; sourceTree = "<group>"; };
 		4013C27219F3ADB60082CD1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		40769D9519F3BC290071BB96 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40769D9619F3BC290071BB96 /* CoreLocation.framework in Frameworks */,
 				4013C27319F3ADB60082CD1B /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		4013C24419F3ADA60082CD1B = {
 			isa = PBXGroup;
 			children = (
+				40769D9519F3BC290071BB96 /* CoreLocation.framework */,
 				4013C27219F3ADB60082CD1B /* MapKit.framework */,
 				4013C24F19F3ADA70082CD1B /* Map App */,
 				4013C26519F3ADA70082CD1B /* Map AppTests */,
@@ -409,6 +413,7 @@
 				4013C26E19F3ADA70082CD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4013C26F19F3ADA70082CD1B /* Build configuration list for PBXNativeTarget "Map AppTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				4013C27119F3ADA70082CD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

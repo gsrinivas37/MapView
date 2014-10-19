@@ -36,5 +36,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>I want to know your location for swift exercise app !!</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>I want to always know your location for swift exercise app !!</string>
 </dict>
 </plist>
